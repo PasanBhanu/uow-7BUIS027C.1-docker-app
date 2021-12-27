@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "16007e86-be3e-475a-89c9-c82c0e0d9000",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Madolduwa\",\n    \"author\": \"Martin Wikramasinghe\",\n    \"isbn\": \"134-122-333\",\n    \"publishedAt\": \"1996/12/04\",\n    \"description\": \"This is a famous book about 2 teenagers\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/books/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books/61b606bd9582c83e1c6c0052",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"61b606bd9582c83e1c6c0052"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Madolduwa Book\",\n    \"author\": \"Martin Wikramasinghe\",\n    \"isbn\": \"134-122-333\",\n    \"publishedAt\": \"1996/12/04\",\n    \"description\": \"This is a famous book about 2 teenagers\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/books/61b606bd9582c83e1c6c0052",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"61b606bd9582c83e1c6c0052"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books/61b606bd9582c83e1c6c0052",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"61b606bd9582c83e1c6c0052"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

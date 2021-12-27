@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cca-groupt-ingress
+spec:
+  rules:
+  - host: cca-groupt.test
+    http:
+      paths:
+      - backend:
+          service:
+            name: cca-groupt-service
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix
+status:
+  loadBalancer: {}

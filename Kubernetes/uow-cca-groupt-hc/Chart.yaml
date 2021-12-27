@@ -1,0 +1,6 @@
+apiVersion: v2
+name: uow-cca-groupt-hc
+description: UoW - CCA - Assignment 1 - Kubernetes with Helm
+type: application
+version: 0.0.1
+appVersion: "0.0.1"
