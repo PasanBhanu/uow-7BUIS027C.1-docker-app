@@ -9,7 +9,6 @@ spec:
   selector:
     matchLabels:
       app: {{ .Values.appName }}
-  strategy: {}
   template:
     metadata:
       labels:
@@ -18,3 +17,5 @@ spec:
       containers:
       - image: {{ .Values.imageName }}
         name: {{ .Values.appName }}-{{ randAlphaNum 5 | lower}}
+        ports:
+        - containerPort: {{ .Values.sourcePort }}
