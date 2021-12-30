@@ -1,9 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Values.ingressName }}
+  name: uow-cca-groupt-ingress
   annotations:
-    kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/scheme: internet-facing
     ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
@@ -13,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: {{ .Values.serviceName }}
+            name: uow-cca-groupt-svc
             port:
-              number: {{ .Values.sourcePort }}
+              number: 8080

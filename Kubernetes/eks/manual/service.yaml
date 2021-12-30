@@ -2,16 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: cca-groupt
-  name: cca-groupt-service
+    app: uow-cca-groupt
+  name: uow-cca-groupt-svc
 spec:
+  selector:
+    app: uow-cca-groupt
   ports:
-  - name: 8080-8080
-    port: 8080
+  - port: 8080
     protocol: TCP
     targetPort: 8080
-  selector:
-    app: cca-groupt
-  type: ClusterIP
-status:
-  loadBalancer: {}
+  type: NodePort
