@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: uow-cca-groupt
+  name: uow-cca-groupt
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: uow-cca-groupt
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: uow-cca-groupt
+    spec:
+      containers:
+      - image: pasanbhanu/uow-cca-groupt
+        name: uow-cca-groupt-sfs22

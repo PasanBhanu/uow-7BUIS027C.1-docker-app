@@ -1,0 +1,12 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: iit-uow-t4g
+  region: us-east-1
+
+nodeGroups:
+  - name: ng-1
+    instanceType: t4g.large
+    desiredCapacity: 1
+availabilityZones: ['us-east-1a', 'us-east-1b']
