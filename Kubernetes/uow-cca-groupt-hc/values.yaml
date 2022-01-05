@@ -3,5 +3,5 @@ imageName: "pasanbhanu/uow-cca-groupt"
 serviceName: "uow-cca-groupt-svc"
 ingressName: "uow-cca-groupt-ingress"
 host: "uow-cca-groupt.test"
-replicas: 1
+replicas: 3
 sourcePort: 8080
