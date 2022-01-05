@@ -7,6 +7,6 @@ metadata:
 
 nodeGroups:
   - name: ng-1
-    instanceType: t4g.large
+    instanceType: t4g.medium
     desiredCapacity: 1
 availabilityZones: ['us-east-1a', 'us-east-1b']

@@ -9,10 +9,16 @@ spec:
   selector:
     matchLabels:
       app: {{ .Values.appName }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: {{ .Values.maxSurge }}
+      maxUnavailable: {{ .Values.maxUnavailable }}
   template:
     metadata:
       labels:
         app: {{ .Values.appName }}
+        version: {{ .Values.appVersion }}
     spec:
       containers:
       - image: {{ .Values.imageName }}
