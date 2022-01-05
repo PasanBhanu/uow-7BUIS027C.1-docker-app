@@ -1,18 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: cca-groupt-ingress
+  name: uow-cca-groupt-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: cca-groupt.test
-    http:
+  - http:
       paths:
-      - backend:
+      - path: /
+        pathType: Prefix
+        backend:
           service:
-            name: cca-groupt-service
+            name: uow-cca-groupt-svc
             port:
               number: 8080
-        path: /
-        pathType: Prefix
-status:
-  loadBalancer: {}
